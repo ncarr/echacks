@@ -14,8 +14,9 @@ public class main : MonoBehaviour {
 
 	public static void Init() {
 		//Hardcoded list of instances
-		prefabs = new string[] { "Rtinfoil" };
+		prefabs = new string[] { "Rtinfoil"}; //, "Cbanana" };
 		main.findNewObject ();
+		moveDampScript.targetPosition = new Vector3 (0, 1, 2);
 		garbage.transform.position = new Vector3 (0, 1, 2);
 	}
 }

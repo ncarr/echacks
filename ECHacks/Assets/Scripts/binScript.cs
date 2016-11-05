@@ -17,6 +17,7 @@ public class binScript : MonoBehaviour, IGvrGazeResponder {
 	/// Called when the user is looking on a GameObject with this script,
 	/// as long as it is set to an appropriate layer (see GvrGaze).
 	public void OnGazeEnter() {
+		moveDampScript.targetPosition = bin.position;
 		
 	}
 
