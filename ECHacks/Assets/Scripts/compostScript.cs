@@ -30,8 +30,9 @@ public class compostScript : MonoBehaviour, IGvrGazeResponder {
 
 	/// Called when the viewer's trigger is used, between OnGazeEnter and OnGazeExit.
 	public void OnGazeTrigger() {
+        moveDampScript.targetPosition = new Vector3(1, -2, 1);
+        main.destroy = true;
+    }
 
-	}
-
-	#endregion
+    #endregion
 }
