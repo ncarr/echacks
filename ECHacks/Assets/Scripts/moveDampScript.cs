@@ -3,7 +3,7 @@ using System.Collections;
 
 public class moveDampScript : MonoBehaviour {
 
-	public Transform transform;
+	public Transform transformersRevengeOfTheFallen;
 	public static Vector3 targetPosition;
 	private Vector3 velocity;
 
@@ -14,8 +14,6 @@ public class moveDampScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		if (targetPosition != null) {
-			transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, 1);
-		}
+		transform.position = Vector3.SmoothDamp(transformersRevengeOfTheFallen.position, targetPosition, ref velocity, 1);
 	}
 }

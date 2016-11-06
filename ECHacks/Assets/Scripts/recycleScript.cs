@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class binScript : MonoBehaviour, IGvrGazeResponder {
+public class recycleScript : MonoBehaviour, IGvrGazeResponder {
 
-	public Transform bin;
+	public GameObject bin;
 	private main mainScript;
 	private GameObject trash;
 
@@ -17,7 +17,8 @@ public class binScript : MonoBehaviour, IGvrGazeResponder {
 	/// Called when the user is looking on a GameObject with this script,
 	/// as long as it is set to an appropriate layer (see GvrGaze).
 	public void OnGazeEnter() {
-		moveDampScript.targetPosition = bin.position;
+		Debug.Log ("Setting target to " + bin.transform.position + "(" + bin.name + ")");
+		moveDampScript.targetPosition = bin.transform.position;
 		
 	}
 
